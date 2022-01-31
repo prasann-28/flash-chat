@@ -53,6 +53,7 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepPurple,
       appBar: AppBar(
         leading: null,
         actions: <Widget>[
@@ -69,7 +70,7 @@ class _ChatScreenState extends State<ChatScreen> {
               }),
         ],
         title: Text('️Chat'),
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.deepPurple,
       ),
       body: SafeArea(
         child: Column(
@@ -114,6 +115,9 @@ class _ChatScreenState extends State<ChatScreen> {
                 children: <Widget>[
                   Expanded(
                     child: TextField(
+                      style: TextStyle(
+                        color: Colors.white
+                      ),
                       controller: messageTextController,
                       onChanged: (value) {
                         //Do something with the user input.
@@ -160,24 +164,28 @@ class MessageBubble extends StatelessWidget {
       child: Column(
         crossAxisAlignment: messageSender == loggedInUser.email ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
-          Text(
-              messageSender,
-            style: TextStyle(
-              fontSize: 12,
-              color: Colors.black54
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+                messageSender,
+              style: TextStyle(
+                fontSize: 12,
+                color: Colors.yellowAccent
+              ),
             ),
           ),
           Material(
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: messageSender != loggedInUser.email ?BorderRadius.only(topRight: Radius.circular(30), bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)) :BorderRadius.only(topLeft: Radius.circular(30), bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
             elevation: 5,
-            color: messageSender != loggedInUser.email ? Colors.lightBlueAccent : Colors.pinkAccent,
+            color: messageSender != loggedInUser.email ? Colors.pinkAccent : Color(0xffffcc00),
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                 child: Text(
                   messageText,
                   style: TextStyle(
-                    color: Colors.white,
-                      fontSize: 15
+                    color: messageSender != loggedInUser.email ? Colors.white: Colors.redAccent,
+                      fontSize: 18,
+                    fontWeight: FontWeight.w600
                   ),
                 ),
               )

@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/FIRDocumentReference.h</key>
 		<data>
-		zkwuwC1csscQMwvUqUzLyRAtG58=
+		L60NqMtvHKxoDHKVs6wW6UcViYc=
 		</data>
 		<key>Headers/FIRDocumentSnapshot.h</key>
 		<data>
@@ -74,11 +74,11 @@
 		</data>
 		<key>Headers/FIRTransaction.h</key>
 		<data>
-		8G/M6cLjirkgZNsBybtitBmpDFA=
+		yumsIiXGNQb0FoUPXTTk9Dd8Z2Y=
 		</data>
 		<key>Headers/FIRWriteBatch.h</key>
 		<data>
-		UaRYthSVFbNB+wlmbf/nmf+9QkE=
+		/BM8vmnkf1aY/5j4GMfjeC8QwHI=
 		</data>
 		<key>Headers/FirebaseFirestore-umbrella.h</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		B9TG0KLEaLZPmsrBqM4C/GlUK5c=
+		/U9lbP67iB4oADTSulK4ERkWJWE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -125,11 +125,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zkwuwC1csscQMwvUqUzLyRAtG58=
+			L60NqMtvHKxoDHKVs6wW6UcViYc=
 			</data>
 			<key>hash2</key>
 			<data>
-			RradJp8P85vVibeqoZ5NzhiaPOv9LaZLbgmJjxNuNwI=
+			53qj3OcVEprcGaXFn4Sd6SCu7kEdZXxxeeQaw5+QwXk=
 			</data>
 		</dict>
 		<key>Headers/FIRDocumentSnapshot.h</key>
@@ -290,22 +290,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8G/M6cLjirkgZNsBybtitBmpDFA=
+			yumsIiXGNQb0FoUPXTTk9Dd8Z2Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			SvGP8pItcl/SPGlbhQ60Fwt9rYUu9RHteDOOJQeLJ9g=
+			ZvypHXYkhc083K8Y789aaNs5F+ovxqvTYyhfwjcV3fU=
 			</data>
 		</dict>
 		<key>Headers/FIRWriteBatch.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UaRYthSVFbNB+wlmbf/nmf+9QkE=
+			/BM8vmnkf1aY/5j4GMfjeC8QwHI=
 			</data>
 			<key>hash2</key>
 			<data>
-			HOS6vN1/6odMZ8I6DzN936GeJ15UWr9clPzyFBDJnK0=
+			7kB7kgmcrIAAitL3Iq7FfWUvozQ6d5GTF97spJ4VnC4=
 			</data>
 		</dict>
 		<key>Headers/FirebaseFirestore-umbrella.h</key>

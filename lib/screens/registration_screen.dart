@@ -31,7 +31,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.deepPurpleAccent,
       body: ModalProgressHUD(
         inAsyncCall: spinner,
         child: Padding(
@@ -40,11 +40,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Hero(
-                tag: 'logo',
-                child: Container(
-                  height: 200.0,
-                  child: Image.asset('images/logo.png'),
+              Flexible(
+                child: Hero(
+                  tag: 'logo',
+                  child: Container(
+                    height: 200.0,
+                    child: Image.asset('images/logo.png'),
+                  ),
                 ),
               ),
               SizedBox(
@@ -52,6 +54,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
               TextField(
                 keyboardType: TextInputType.emailAddress,
+                style: TextStyle(
+                  color: Colors.white
+                ),
                 onChanged: (value) {
                   //Do something with the user input.
                   email = value;
@@ -63,6 +68,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
               TextField(
                 obscureText: true,
+                style: TextStyle(
+                    color: Colors.white
+                ),
                 onChanged: (value) {
                   //Do something with the user input.
                   password = value;
@@ -72,7 +80,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               SizedBox(
                 height: 24.0,
               ),
-              RoundedButton(buttonTitle: "Register", buttonColor: Colors.blueAccent, onPressed: () async {
+              RoundedButton(buttonTitle: "Register", buttonColor: Colors.pink, onPressed: () async {
                 setState(() {
                   spinner = true;
                 });

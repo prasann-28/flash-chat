@@ -29,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.deepPurpleAccent,
       body: ModalProgressHUD(
         inAsyncCall: spinner,
         child: Padding(
@@ -38,11 +38,13 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Hero(
-                tag: 'logo',
-                child: Container(
-                  height: 200.0,
-                  child: Image.asset('images/logo.png'),
+              Flexible(
+                child: Hero(
+                  tag: 'logo',
+                  child: Container(
+                    height: 200.0,
+                    child: Image.asset('images/logo.png'),
+                  ),
                 ),
               ),
               SizedBox(
@@ -50,6 +52,9 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               TextField(
                 keyboardType: TextInputType.emailAddress,
+                style: TextStyle(
+                  color: Colors.white
+                ),
                 onChanged: (value) {
                   //Do something with the user input.
                   email = value;
@@ -61,6 +66,9 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               TextField(
                 obscureText: true,
+                style: TextStyle(
+                  color: Colors.white
+                ),
                 onChanged: (value) {
                   //Do something with the user input.
                   password = value;
@@ -70,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 24.0,
               ),
-              RoundedButton(buttonTitle: 'Log In', buttonColor: Colors.lightBlueAccent, onPressed: () async{
+              RoundedButton(buttonTitle: 'Log In', buttonColor: Colors.pinkAccent, onPressed: () async{
                 setState(() {
                   spinner = true;
                 });

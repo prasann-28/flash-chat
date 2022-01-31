@@ -24,7 +24,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
       duration: const Duration(seconds: 2),
       vsync: this,
     );
-    animation = ColorTween(begin: Colors.grey ,end: Colors.white ).animate(controller);
+    animation = ColorTween(begin: Colors.blueGrey ,end: Colors.deepPurpleAccent ).animate(controller);
     controller.forward();
     animation.addStatusListener((status) {
       print(status);
@@ -68,8 +68,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
                 TypewriterAnimatedTextKit(
                   text: ['Flash Chat'],
                   textStyle: TextStyle(
+                    color: Colors.orangeAccent,
                     fontSize: 40.0,
                     fontWeight: FontWeight.w900,
+                    fontStyle: FontStyle.italic
                   ),
                 ),
                 // AnimatedTextKit(animatedTexts: [
@@ -87,10 +89,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
             SizedBox(
               height: 48.0,
             ),
-            RoundedButton(buttonTitle:'Log in' ,buttonColor: Colors.lightBlueAccent, onPressed: (){
+            RoundedButton(buttonTitle:'Log in' ,buttonColor: Colors.pinkAccent, onPressed: (){
               Navigator.pushNamed(context, LoginScreen.id);
             }, ),
-            RoundedButton(buttonTitle: "Register", buttonColor: Colors.blueAccent, onPressed: (){
+            RoundedButton(buttonTitle: "Register", buttonColor: Colors.pink, onPressed: (){
               Navigator.pushNamed(context, RegistrationScreen.id);
             }),
           ],
